@@ -1,0 +1,74 @@
+.body {
+  font-family: "Montserrat",sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.content {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.content section {
+  margin-top: 15px;
+  padding: 5px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+section.change_calc {
+  margin: 30px auto;
+  padding: 0 15px;
+}
+
+.change_calc__form {
+  display: table;
+  padding: 15px 30px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.change_calc__form, .change_calc__form input {
+  border-radius: 4px;
+  border: 1px #eee solid;
+}
+
+.change_calc__form input, .btn {
+  margin: 0 auto 15px;
+  padding: 10px 0;
+}
+
+.change_calc__form input {
+  text-indent: 10px;
+}
+
+input[disabled]{
+  background-color: #66c8ce;
+  color: #fff;
+  font-weight: 600;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.btn {
+  font-family: "Montserrat",sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  width: 100%;
+  border: none;
+  background: linear-gradient(to right, #0DB7BD , #02ACD0);
+  color: #fff;
+}
+
+section.modals {
+  text-align: center;
+}
+.open-modal {
+  width: auto;
+  margin: 0 auto;
+  padding: 15px;
+}

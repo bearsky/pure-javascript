@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test Task</title>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+	<!-- <link rel="stylesheet" href="reset.css"> -->
+</head>
+<body class="body">
+	<div class="content" id="content">
+		<section class="change_calc">
+			<form class="change_calc__form" id="changeCalcForm">
+				<label>Ціна товару</label>
+				<div>
+					<input type="number" step="0.01" id="price" placeholder="0">
+				</div>
+
+				<label>Готівка</label>
+				<div>
+					<input type="number" step="0.01" id="cache" placeholder="0">
+				</div>
+
+				<label>Ваша Решта</label>
+				<div>
+					<input type="number" step="0.01" id="change" disabled placeholder="0">
+				</div>
+
+				<div>
+					<button class="btn" type="submit" id="submitBtn">Повернути решту</button>
+				</div>
+			</form>
+		</section>
+		<section class="modals">
+			<button class="btn open-modal" type="button" id="openModal" name="button">OpenModal</button>
+		</section>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>
