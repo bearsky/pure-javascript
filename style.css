@@ -13,11 +13,7 @@
   margin-top: 15px;
   padding: 5px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-}
-
-section.change_calc {
-  margin: 30px auto;
-  padding: 0 15px;
+  text-align: center;
 }
 
 .change_calc__form {
@@ -41,11 +37,12 @@ section.change_calc {
   text-indent: 10px;
 }
 
-input[disabled]{
+input#change{
   background-color: #66c8ce;
   color: #fff;
   font-weight: 600;
 }
+input#change::placeholder {color: #fff}
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
