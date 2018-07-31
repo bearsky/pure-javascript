@@ -13,6 +13,8 @@ function calcChange(event) {
 
   var changeCache = change.value;
 
+  checkPositiveVal(changeCache);
+
   var cents = changeCache % 1;
   var dollars = changeCache - cents;
   cents = cents * 100;
@@ -43,7 +45,7 @@ function denomination(obj) {
   clearOutputs(document.querySelectorAll('.outputBox'));
 
   Object.keys(obj).forEach(function(key) {
-      var nominalExist = obj[key]!== 0;
+      var nominalExist = obj[key] > 0;
       var div = document.createElement("div");
       div.classList.add("outputBox");
       var divContent = document.createTextNode(key + ' * ' + obj[key]);
@@ -59,4 +61,16 @@ function clearOutputs(arr) {
   arr.forEach(function(el) {
     el.remove();
   });
+};
+
+function checkPositiveVal(change) {
+  clearOutputs(document.querySelectorAll('.errorMessage'));
+  var negVal = change < 0;
+  var errDiv = document.createElement("div");
+  errDiv.classList.add("errorMessage");
+  var errDivContent = document.createTextNode('Need more money!');
+  negVal && errDiv.appendChild(errDivContent);
+
+  var formContainer = document.getElementById("changeCalcForm");
+  formContainer.appendChild(errDiv);
 };
