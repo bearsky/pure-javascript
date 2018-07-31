@@ -10,32 +10,33 @@
 <body class="body">
 	<div class="content" id="content">
 		<section class="change_calc">
-			<h1>Завдання #1 - Калькулятор решти</h1>
+			<h3>Task #1 - Change calculator</h3>
 			<form class="change_calc__form" id="changeCalcForm">
-				<label>Ціна товару</label>
+				<label>Price</label>
 				<div>
 					<input type="number" step="0.01" id="price" placeholder="0">
 				</div>
 
-				<label>Готівка</label>
+				<label>Cash</label>
 				<div>
 					<input type="number" step="0.01" id="cache" placeholder="0">
 				</div>
 
-				<label>Ваша Решта</label>
+				<label>Your Change</label>
 				<div>
 					<input type="number" step="0.01" id="change" disabled placeholder="0">
 				</div>
 
-				<div>
-					<button class="btn" type="submit" id="submitBtn">Повернути решту</button>
+				<div id="submitBtnContainer">
+					<button class="btn" type="submit" id="submitBtn">Calc change</button>
 				</div>
 			</form>
 		</section>
 		<section class="modals">
+			<h3>Task #2 - Modal window</h3>
 			<button class="btn open-modal" type="button" id="openModal" name="button">OpenModal</button>
 		</section>
 	</div>
-	<script src="script.js"></script>
+	<script src="changeCalc.js"></script>
 </body>
 </html>
