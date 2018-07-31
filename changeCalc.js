@@ -5,10 +5,10 @@ changeCalcForm.addEventListener("submit", calcChange);
 function calcChange(event) {
   event.preventDefault();
   var priceVal = document.getElementById('price').value;
-  var cacheVal = document.getElementById('cache').value;
+  var cashVal = document.getElementById('cash').value;
   var change = document.getElementById('change');
 
-  changeVal = parseFloat(cacheVal).toFixed(2) - parseFloat(priceVal).toFixed(2);
+  changeVal = parseFloat(cashVal).toFixed(2) - parseFloat(priceVal).toFixed(2);
   change.value = parseFloat(changeVal).toFixed(2);
 
   var changeCache = change.value;
