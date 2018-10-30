@@ -1,4 +1,4 @@
 window.onload = function () {
-  document.getElementsByClassName("netlify-identity-button")[0].innerText = "Login";
-  console.log(netlifyIdentity.currentUser());
+  let buttonText = netlifyIdentity.currentUser() ? netlifyIdentity.currentUser().user_metadata.full_name : "Login";
+  document.getElementsByClassName("netlify-identity-button")[0].innerText = buttonText;
 };
