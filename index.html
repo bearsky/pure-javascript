@@ -9,8 +9,24 @@
 	<script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body class="body">
+	<!-- FB Login -->
+	<div id="fb-root"></div>
+	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0&appId=2472288533022657&autoLogAppEvents=1"></script>
+	
+
 	<div class="header">
 		<div data-netlify-identity-button></div>
+		<div 
+			class="fb-login-button" 
+			data-width="" 
+			data-size="small" 
+			data-button-type="login_with" 
+			data-auto-logout-link="true" 
+			data-use-continue-as="false"
+			scope="public_profile,email"
+  			onlogin="checkLoginState();"
+		>
+		</div>
 	</div>
 	<div class="content" id="content">
 		<section class="change_calc">
@@ -64,6 +80,16 @@
 			js.src = "https://connect.facebook.net/en_US/sdk.js";
 			fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));
+
+		FB.getLoginStatus(function(response) {
+			statusChangeCallback(response);
+		});
+
+		function checkLoginState() {
+			FB.getLoginStatus(function(response) {
+				statusChangeCallback(response);
+			});
+		}	
 	</script>
 </body>
 </html>
